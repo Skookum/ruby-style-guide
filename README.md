@@ -230,6 +230,8 @@ Translations of the guide are available in the following languages:
   for block and hash literals, as well as embedded expressions in
   strings. For hash literals two styles are considered acceptable.
 
+  **Skookum uses the first option, spaces always.**
+
   ```Ruby
   # good - space after { and before }
   { one: 1, two: 2 }
@@ -245,6 +247,8 @@ Translations of the guide are available in the following languages:
 
   As far as embedded expressions go, there are also two acceptable
   options:
+
+  **Skookum uses the first option, no spaces in string embedded expressions.**
 
   ```Ruby
   # good - no spaces
@@ -465,6 +469,8 @@ Translations of the guide are available in the following languages:
     popular styles in the Ruby community, both of which are considered
     good - leading `.` (Option A) and trailing `.` (Option B).
 <sup>[[link](#consistent-multi-line-chains)]</sup>
+
+**Skookum uses Option A. `.` on second line**
 
   * **(Option A)** When continuing a chained method invocation on
     another line keep the `.` on the second line.
@@ -3005,6 +3011,9 @@ condition](#safe-assignment-in-condition).
   Adopt a consistent string literal quoting style. There are two popular
   styles in the Ruby community, both of which are considered good - single
   quotes by default (Option A) and double quotes by default (Option B).
+
+  **Skookum uses Option B. Double quotes everywhere for everything.**
+
 <sup>[[link](#consistent-string-literals)]</sup>
 
   * **(Option A)** Prefer single-quoted strings when you don't need
