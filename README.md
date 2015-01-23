@@ -256,7 +256,7 @@ Translations of the guide are available in the following languages:
 
   # good - only arounds brackets, operators would still have spaces
   good - "Tomorrow is #{Date.today + 1}"
-  basd - "Tomorrow is #{Date.today+1}"
+  bad - "Tomorrow is #{Date.today+1}"
 
   # ok - arguably more readable
   "string#{ expr }"
