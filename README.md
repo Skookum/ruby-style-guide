@@ -230,14 +230,9 @@ Translations of the guide are available in the following languages:
   for block and hash literals, as well as embedded expressions in
   strings. For hash literals two styles are considered acceptable.
 
-  **Skookum uses the first option, spaces always.**
-
   ```Ruby
   # good - space after { and before }
   { one: 1, two: 2 }
-
-  # good - no space after { and before }
-  {one: 1, two: 2}
   ```
 
   The first variant is slightly more readable (and arguably more
@@ -245,10 +240,8 @@ Translations of the guide are available in the following languages:
   the advantage of adding visual difference between block and hash
   literals. Whichever one you pick - apply it consistently.
 
-  As far as embedded expressions go, there are also two acceptable
-  options:
-
-  **Skookum uses the first option, no spaces in string embedded expressions.**
+  As far as embedded expressions go, don't use spaces, except around
+  operators:
 
   ```Ruby
   # good - no spaces
@@ -257,9 +250,6 @@ Translations of the guide are available in the following languages:
   # good - only arounds brackets, operators would still have spaces
   good - "Tomorrow is #{Date.today + 1}"
   bad - "Tomorrow is #{Date.today+1}"
-
-  # ok - arguably more readable
-  "string#{ expr }"
   ```
 
   The first style is extremely more popular and you're generally
@@ -469,14 +459,11 @@ Translations of the guide are available in the following languages:
   ```
 
 * <a name="consistent-multi-line-chains"></a>
-    Adopt a consistent multi-line method chaining style. There are two
-    popular styles in the Ruby community, both of which are considered
-    good - leading `.` (Option A) and trailing `.` (Option B).
+    Adopt a consistent multi-line method chaining style. 
 <sup>[[link](#consistent-multi-line-chains)]</sup>
 
-**Skookum uses Option A. `.` on second line**
 
-  * **(Option A)** When continuing a chained method invocation on
+  * When continuing a chained method invocation on
     another line keep the `.` on the second line.
 
     ```Ruby
@@ -487,20 +474,6 @@ Translations of the guide are available in the following languages:
     # good - it's immediately clear what's going on the second line
     one.two.three
       .four
-    ```
-
-  * **(Option B)** When continuing a chained method invocation on another line,
-    include the `.` on the first line to indicate that the
-    expression continues.
-
-    ```Ruby
-    # bad - need to read ahead to the second line to know that the chain continues
-    one.two.three
-      .four
-
-    # good - it's immediately clear that the expression continues beyond the first line
-    one.two.three.
-      four
     ```
 
   A discussion on the merits of both alternative styles can be found
@@ -3012,27 +2985,12 @@ condition](#safe-assignment-in-condition).
   ```
 
 * <a name="consistent-string-literals"></a>
-  Adopt a consistent string literal quoting style. There are two popular
-  styles in the Ruby community, both of which are considered good - single
-  quotes by default (Option A) and double quotes by default (Option B).
-
-  **Skookum uses Option B. Double quotes everywhere for everything.**
+  Adopt a consistent string literal quoting style. Use double quotes everywhere
+  for everything.
 
 <sup>[[link](#consistent-string-literals)]</sup>
 
-  * **(Option A)** Prefer single-quoted strings when you don't need
-    string interpolation or special symbols such as `\t`, `\n`, `'`,
-    etc.
-
-    ```Ruby
-    # bad
-    name = "Bozhidar"
-
-    # good
-    name = 'Bozhidar'
-    ```
-
-  * **(Option B)** Prefer double-quotes unless your string literal
+  * Prefer double-quotes unless your string literal
     contains `"` or escape characters you want to suppress.
 
     ```Ruby
@@ -3042,10 +3000,6 @@ condition](#safe-assignment-in-condition).
     # good
     name = "Bozhidar"
     ```
-
-  The second style is arguably a bit more popular in the Ruby
-  community. The string literals in this guide, however, are
-  aligned with the first style.
 
 * <a name="no-character-literals"></a>
   Don't use the character literal syntax `?x`. Since Ruby 1.9 it's basically
