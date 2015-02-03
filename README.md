@@ -1981,7 +1981,8 @@ condition](#safe-assignment-in-condition).
 
 * <a name="indent-annotations"></a>
   If multiple lines are required to describe the problem, subsequent lines
-  should be indented two spaces after the `#`.
+  should be indented three spaces after the `#` (one general plus two for
+  indentation purpose).
 <sup>[[link](#indent-annotations)]</sup>
 
   ```Ruby
@@ -2384,7 +2385,7 @@ condition](#safe-assignment-in-condition).
 <sup>[[link](#visibility)]</sup>
 
 * <a name="indent-public-private-protected"></a>
-  Indent the `public`, `protected`, and `private` methods as much the method
+  Indent the `public`, `protected`, and `private` methods as much as the method
   definitions they apply to. Leave one blank line above the visibility modifier
   and one blank line below in order to emphasize that it applies to all methods
   below it.
@@ -3308,9 +3309,9 @@ condition](#safe-assignment-in-condition).
 
 ## Metaprogramming
 
-* <a name="no-metaprogramming-masturbation"></a>
+* <a name="no-needless-metaprogramming"></a>
   Avoid needless metaprogramming.
-<sup>[[link](#no-metaprogramming-masturbation)]</sup>
+<sup>[[link](#no-needless-metaprogramming)]</sup>
 
 * <a name="no-monkey-patching"></a>
   Do not mess around in core classes when writing libraries.  (Do not
